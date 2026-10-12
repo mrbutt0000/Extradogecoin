@@ -202,8 +202,8 @@
     <div class="tags reveal">
       <span class="tag">✅ 0% Buy Tax</span>
       <span class="tag">✅ 0% Sell Tax</span>
-      <span class="tag">🔒 Mint authority to be revoked at launch</span>
-      <span class="tag">🔒 Freeze authority to be revoked at launch</span>
+      <span class="tag">🔒 No mint function (fixed supply)</span>
+      <span class="tag">🔒 Contract ownership to be renounced at launch</span>
     </div>
   </div>
 </section>
@@ -289,7 +289,7 @@
       </ul>
 
       <h4>3. Security &amp; Transparency</h4>
-      <p>$EDOGE is planned with a 0% buy and 0% sell tax. At launch, mint and freeze authorities are planned to be revoked, and proof (transaction links) will be published. Liquidity lock details and wallet addresses will be shared publicly after launch. No technology can remove all risk, so please do your own research.</p>
+      <p>$EDOGE is planned with a 0% buy and 0% sell tax. At launch, the supply is planned to be fixed with no mint function and ownership renounced, and proof (transaction links) will be published. Liquidity lock details and wallet addresses will be shared publicly after launch. No technology can remove all risk, so please do your own research.</p>
 
       <h4>4. Utility Vision</h4>
       <p>The team plans to develop AI-powered gaming utility for holders. These are goals, not guarantees, and development timelines may change.</p>
@@ -327,7 +327,7 @@
     <div class="promise">
       <div class="pcard reveal"><div class="ic">🤝</div><h3>Community First</h3><p>Built with and for the pack. Your feedback helps shape the roadmap.</p></div>
       <div class="pcard reveal"><div class="ic">📣</div><h3>Open Updates</h3><p>Regular progress updates on our X and Telegram, so you always know what is happening.</p></div>
-      <div class="pcard reveal"><div class="ic">🔒</div><h3>Proof at Launch</h3><p>LP lock and authority revoke links will be published so everyone can verify them.</p></div>
+      <div class="pcard reveal"><div class="ic">🔒</div><h3>Proof at Launch</h3><p>LP lock and ownership renounce links will be published so everyone can verify them.</p></div>
       <div class="pcard reveal"><div class="ic">🚀</div><h3>Beyond Memes</h3><p>AI and gaming utility is our long-term goal, built step by step.</p></div>
     </div>
     <p class="softnote reveal">$EDOGE is a fun community meme token. Not financial advice, so please do your own research.</p>
@@ -353,28 +353,4 @@
   (function(){
     if(CONTRACT_ADDRESS){
       var box=document.getElementById("caBox"), val=document.getElementById("caVal"),
-          st=document.getElementById("caStatus"), btn=document.getElementById("caCopy");
-      box.classList.add("live");
-      st.innerHTML="<b style='color:var(--green)'>✅ Official Contract Address</b>";
-      val.textContent=CONTRACT_ADDRESS;
-      btn.style.display="inline-block";
-      btn.onclick=function(){
-        if(navigator.clipboard){navigator.clipboard.writeText(CONTRACT_ADDRESS)}
-        btn.textContent="Copied!"; setTimeout(function(){btn.textContent="Copy Address"},1800);
-      };
-      if(EXPLORER_LINK){
-        var a=document.createElement("a");
-        a.href=EXPLORER_LINK;a.target="_blank";a.rel="noopener";
-        a.className="btn btn-line btn-sm";a.style.marginLeft="10px";a.textContent="View on Explorer";
-        btn.parentNode.appendChild(a);
-      }
-    }
-
-    var io=new IntersectionObserver(function(es){
-      es.forEach(function(e){ if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)} });
-    },{threshold:.12});
-    document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
-  })();
-</script>
-</body>
-</html>
+          st=document.getElementById("caStatus
